@@ -1,0 +1,61 @@
+== ядро программирование
+https://habr.com/ru/companies/ruvds/articles/681880/
+https://russianblogs.com/article/96381572477/
+https://dmilvdv.narod.ru/Translate/LDD3/index.html
+https://itsecforu.ru/wp-content/uploads/2018/01/1lav_robert_yadro_linux_opisanie_protsessa_razrabotki.pdf
+
+== time + timers 
+https://elixir.bootlin.com/linux/v4.20.17/source/include/linux/jiffies.h
+https://www.kernel.org/doc/html/latest/core-api/timekeeping.html
+https://elixir.bootlin.com/linux/v4.15/source/kernel/time/time.c#L639
+https://elixir.bootlin.com/linux/v4.15/source/include/linux/ktime.h#L28
+https://elixir.bootlin.com/linux/v4.15/source/include/linux/time64.h#L8
+https://elixir.bootlin.com/linux/v4.20.17/source/include/linux/timekeeping.h#L129
+https://elixir.bootlin.com/linux/v4.20.17/source/kernel/time/timekeeping.c#L97
+
+==hash
+https://elixir.bootlin.com/linux/v4.15/source/tools/include/linux/jhash.h#L46
+https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/include/linux/jiffies.h?h=linux-4.15.y
+
+==atomic + locks
+https://www.programmersought.com/article/35707049536/
+https://www.kernel.org/doc/html/latest/core-api/wrappers/atomic_t.html?highlight=atomic_read
+https://www.kernel.org/doc/html/latest/locking/seqlock.html
+https://www.kernel.org/doc/Documentation/kernel-hacking/locking.rst
+
+https://elixir.bootlin.com/linux/v4.20.17/C/ident/atomic_fetch_add
+https://elixir.bootlin.com/linux/v4.20.17/source/include/linux/seqlock.h#L431
+https://lwn.net/Articles/22818/  - seq_lock
+
+==c - number limits const
+https://learn.microsoft.com/ru-ru/cpp/c-language/cpp-integer-limits?view=msvc-170
+
+== kernel module params
+https://russianblogs.com/article/5035182216/
+https://devarea.com/linux-kernel-development-kernel-module-parameters/
+
+== kprint sprintf
+https://www.kernel.org/doc/html/latest/core-api/printk-formats.html
+https://www.opennet.ru/man.shtml?topic=vsnprintf&category=3&russian=0
+https://elixir.bootlin.com/linux/v4.15/source/lib/vsprintf.c#L1847
+
+== rcu
+https://russianblogs.com/article/4750617541/
+https://devdoc.net/linux/LinuxKernel-docs-5.3rc4/core-api/kernel-api.html
+https://lwn.net/Articles/262464/
+
+== sockets
+https://www.kernel.org/doc/html/latest/networking/kapi.html#c.sk_buff
+
+== mark
+https://stackoverflow.com/questions/57055240/bpf-mark-in-structure-skbuff-is-not-writeable
+https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html#MARKMATCH
+https://adminunix.ru/linux-iptables-rukovodstvo-chast-4-tseli-dlya-pra/
+https://www.kernel.org/doc/html/latest/networking/kapi.html#c.sk_buff
+
+== netflow 9
+https://habr.com/ru/articles/187820/
+https://www.ietf.org/rfc/rfc3954.txt
+https://netflow.caligare.com/netflow_v9.htm 
+https://www.protokols.ru/WP/rfc3954/
+https://www.cisco.com/en/US/technologies/tk648/tk362/technologies_white_paper09186a00800a3db9.html

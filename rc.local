@@ -1,0 +1,49 @@
+#!/bin/sh -e
+#
+# rc.local example for ANAT
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+
+modprobe xt_ANAT nat_pool=11.103.133.66-11.103.133.67 nf_dest=10.10.0.20:2055
+cat /usr/src/axt_NAT_v0_03/new_config.cfg > /proc/net/ANAT/config
+
+iptables -F
+iptables -t raw -F
+
+iptables -t raw -A PREROUTING -s 172.20.0.0/16 -j CT --notrack
+iptables -t raw -A PREROUTING -d 11.103.133.65/28 -j CT --notrack
+
+iptables -t raw -A PREROUTING -d 11.103.133.65/28 -j ANAT --dnat
+
+iptables -A FORWARD -p udp -j MARK --set-mark 101
+iptables -A FORWARD -d 172.20.0.0/16 -i vlan502 -o vlan3500 -j ACCEPT
+iptables -A FORWARD -s 172.20.0.0/16 -i vlan3500 -o vlan502 -j ANAT --snat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exit 0
